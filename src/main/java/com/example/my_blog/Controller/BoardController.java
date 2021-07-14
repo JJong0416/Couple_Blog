@@ -9,6 +9,6 @@ public class BoardController {
 
     @GetMapping("/")
     public String test(Model model){
-        return "index";
+        return "layouts/layout";
     }
 }

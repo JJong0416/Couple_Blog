@@ -1,4 +1,4 @@
-package com.example.my_blog.model;
+package com.example.my_blog.model.kakao;
 
 import lombok.Data;
 

@@ -29,7 +29,7 @@ public class UserRepositoryTest {
     public void addUser(){
         //given
         userRepository.save(User.builder()
-                .id(1)
+                .id(1L)
                 .username("박종찬")
                 .password("12345")
                 .email("whdcks5681@naver.com")

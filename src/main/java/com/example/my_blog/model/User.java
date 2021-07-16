@@ -27,7 +27,7 @@ public class User {
  
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
 	@Column(nullable = false, length = 150, unique = true)
 	private String username; 
@@ -35,14 +35,14 @@ public class User {
 	@Column(nullable = false, length = 100)
 	private String password;
 	
-	@Column(nullable = false, length = 50) 
+	@Column(nullable = false, length = 50)
 	private String email;
-	
+
 	private String oauth;
 
 	@Enumerated(EnumType.STRING)
 	private RoleType role;
-	
+
 	@CreationTimestamp
 	private Timestamp createDate;
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layouts/layout"
+>
+<div layout:fragment="content">
+    <div class="container"> <!-- 컨테이너랑 중앙에 배치하면서 사이즈를 확보하는 것을 말한다 -->
+        <button class = "btn btn-secondary" onclick="history.back()">돌아가기</button>
+<!--                <span th:if test="${board.user.id == principal.user.id}">-->
+<!--                    <a href= "/board/${board.id}/updateForm" class ="btn btn-warning">수정</a>-->
+<!--                    <button id = "btn-delete" class = "btn btn-danger">삭제</button>-->
+<!--                </span>-->
+
+        <br/><br/>
+
+    </div>
+</div>
+</html>
+
+
+<!--        <div>-->
+<!--            <h3>${board.title}</h3>-->
+<!--        </div>-->
+<!--        <hr />-->
+<!--        <div>-->
+<!--            <div>${board.content}</div>-->
+<!--        </div>-->
+<!--        <hr />-->
+
+<!--        <div class= "card">-->
+<!--            <form>-->
+<!--                <input type="hidden" id="userId" value="${principal.user.id }"/>-->
+<!--                <input type="hidden" id = "boardId" value = "${board.id }"/>-->
+<!--                <div>-->
+<!--                    <div class="card-body">-->
+<!--                        <textarea id="reply-content" class="form-control" rows="1"></textarea></div>-->
+<!--                    <div class="card-footer">-->
+<!--                        <button type = "button" id = "btn-reply-save" class="btn btn-primary">등록</button></div>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <br/>-->
+<!--        <div class = "card">-->
+<!--            <div class="card-header"> 댓글 리스트</div>-->
+<!--            <ul id="reply-box" class="list-group"> &lt;!&ndash;  내가 만든 id는 짝대기 2개가 괜찮다. 구분하기 쉬워서 &ndash;&gt;-->
+<!--                <c:forEach var="reply" items="${board.replys }">-->
+<!--                    <li id="reply-${reply.id }" class="list-group-item d-flex justify-content-between">-->
+<!--                        <div>${reply.content}</div>-->
+<!--                        <div class = "d-flex">-->
+<!--                            <div class = "font-italic">작성자 : ${reply.user.username } &nbsp; </div>-->
+<!--                            <c:if test="${reply.user.id == principal.user.id}"> &lt;!&ndash;  principal이란 것은 PrincipalDetail에서 User를 말하는 것이다. &ndash;&gt;-->
+<!--                                <button onClick= "index.replyDelete(${board.id }, ${reply.id })" class = "badge">삭제</button>-->
+<!--                            </c:if>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </c:forEach>-->
+<!--            </ul>-->
+<!--        </div>-->
